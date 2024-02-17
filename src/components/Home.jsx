@@ -9,7 +9,7 @@ import {
     DialogTrigger,
     DialogFooter,
     
-  } from "./dialog"
+  } from "./ui/dialog"
 import Button from "./Button";
 import { playerStore } from "../../store/playerStore";
 import { useEffect, useState } from "react";
