@@ -5,6 +5,8 @@ import {
 } from "react-router-dom";
 import GameBoard from './components/GameBoard.jsx';
 import Home from "./components/Home.jsx";
+import LeaderBoard from "./components/LeaderBoard.jsx";
+import About from "./components/About.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
     path: "/gameboard",
     element: <GameBoard/>,
   },
+  {
+    path: "/leaderboard",
+    element: <LeaderBoard/>,
+  },
+  {
+    path: "/about",
+    element: <About/>,
+  },
 ]);
 
 
@@ -23,7 +33,7 @@ function App() {
   return (
     <>
       {/* for the background grid design  */}
-      <div className="h-screen w-screen px-[10px] sm:px-[4rem] py-[2rem] dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative overflow-hidden ">
+      <div className="h-screen w-screen px-[10px] sm:px-[4rem] py-[2rem] dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative overflow-auto lg:overflow-hidden  ">
         {/* Radial gradient for the container to give a faded look */}
             <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]">
             </div>

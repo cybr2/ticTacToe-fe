@@ -76,7 +76,7 @@ const Home = () => {
                 <img src={heroIcon} alt="" className="h-[50%]  sm:h-[60%] mb-5 " />
                 <Dialog>
                     <DialogTrigger>
-                        <div className="mb-4 hover:scale-110 transform duration-200 text-neutral-500">new game</div> 
+                        <div className="mb-4 hover:scale-110 transform duration-200 text-neutral-500 capitalize">new game</div> 
                     </DialogTrigger>
                     <DialogContent className="bg-slate-200 flex flex-col w-[80%] sm:w-full justify-center items-center rounded-lg">
                         <DialogHeader>
@@ -107,8 +107,8 @@ const Home = () => {
                         </DialogFooter>
                     </DialogContent>   
                 </Dialog>
-                <Button title='leaderboard'/>
-                <Button title='about'/>
+                <Link to={'/leaderboard'} className="mb-4 hover:scale-110 transform duration-200 text-neutral-500 capitalize">leaderboard</Link> 
+                <Link to={'/about'} className="mb-4 hover:scale-110 transform duration-200 text-neutral-500 capitalize">about</Link> 
             </div>
         </div>
     </>
