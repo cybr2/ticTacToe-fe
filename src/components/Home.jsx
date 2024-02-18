@@ -10,7 +10,6 @@ import {
     DialogFooter,
     
   } from "./ui/dialog"
-import Button from "./Button";
 import { playerStore } from "../../store/playerStore";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -49,7 +48,7 @@ const Home = () => {
 
     const handleSave = () => {
         console.log('saving')
-        const currentDate = new Date().toLocaleDateString;
+        const currentDate = new Date().toLocaleDateString();
         const currentTime = new Date().toLocaleTimeString();
 
         const data = {

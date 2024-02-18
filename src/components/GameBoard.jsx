@@ -44,19 +44,19 @@ const GameBoard = () => {
   const navigate = useNavigate();
 
   const getGameData = () => {
-    const currentDate = new Date().toLocaleDateString;
+    const currentDate = new Date().toLocaleDateString();
     const currentTime = new Date().toLocaleTimeString();
 
     const data = {
       dateTime: `${currentDate} ${currentTime}`,
-      playerOne,
-      playerTwo,
-      playerOneWinCount,
-      playerTwoWinCount,
-      playerOneLoseCount,
-      playerTwoLoseCount,
       roundCount,
-      drawCount
+      drawCount,
+      playerOne,
+      playerOneWinCount,
+      playerOneLoseCount,
+      playerTwo,
+      playerTwoWinCount,
+      playerTwoLoseCount,
     };
 
     return data;
