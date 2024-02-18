@@ -106,7 +106,7 @@ const Home = () => {
                         </DialogFooter>
                     </DialogContent>   
                 </Dialog>
-                <Link to={'/leaderboard'} className="mb-4 hover:scale-110 transform duration-200 text-neutral-500 capitalize">leaderboard</Link> 
+                <Link to={'/leaderboard'} className="mb-4 hover:scale-110 transform duration-200 text-neutral-500 capitalize">history</Link> 
                 <Link to={'/about'} className="mb-4 hover:scale-110 transform duration-200 text-neutral-500 capitalize">about</Link> 
             </div>
         </div>
