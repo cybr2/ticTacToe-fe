@@ -1,5 +1,4 @@
 import Board from "./Board"
-import Header from "./Header"
 import { playerStore } from "../../store/playerStore";
 import { handleWordOnScreen } from "../../lib/utils/wordOnScreen";
 import { gameOverStore } from "../../store/gameOverStore";
@@ -21,7 +20,7 @@ import {
 } from "./ui/dropdown-menu";
 
 import { useNavigate  } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import { winnerStore } from "../../store/winnerStore";
 import { tileStore } from "../../store/tileStore";
 import { checkPlayerStore } from "../../store/checkPlayerStore";
@@ -30,13 +29,14 @@ import useWinLoseStore from "../../store/winLoseStore";
 import useDrawStore from "../../store/drawStore";
 import { settingIcon, homeIcon, logoIcon } from "../assets/svgs";
 import { playIcon } from "../assets/images";
+import { useEffect } from "react";
 
 const GameBoard = () => {
   const { status } = winnerStore();
   const { setSquares }  =  tileStore();
   const { setIsX }  = checkPlayerStore();
   const { isGameOver , setIsGameOver } = gameOverStore(); 
-  const { playerOne , playerTwo } = playerStore();
+  const { playerOne , playerTwo, setPlayerOne, setPlayerTwo } = playerStore();
   const { roundCount,setRoundCount } = useRoundStore();
   const { playerOneWinCount, playerTwoWinCount, playerOneLoseCount, playerTwoLoseCount, setPlayerOneWinCount, setPlayerTwoWinCount, setPlayerOneLoseCount, setPlayerTwoLoseCount } = useWinLoseStore();
   const { drawCount, setDrawCount } = useDrawStore();
@@ -49,6 +49,8 @@ const GameBoard = () => {
 
     const data = {
       dateTime: `${currentDate} ${currentTime}`,
+      playerOne,
+      playerTwo,
       playerOneWinCount,
       playerTwoWinCount,
       playerOneLoseCount,
@@ -60,18 +62,32 @@ const GameBoard = () => {
     return data;
   }
 
-  // const handleExit = () => {
-  //   setRoundCount(1);
-  //   setPlayerOneWinCount(0);
-  //   setPlayerTwoWinCount(0);
-  //   setPlayerOneLoseCount(0);
-  //   setPlayerTwoLoseCount(0);
-  //   setDrawCount(0);
-  //   setIsGameOver(false);
-  //   setIsX(true);
-  //   setSquares(Array(9).fill(null));
-  //   navigate('/');
-  // };
+
+  useEffect(() => {
+    // Check if there is existing data in localStorage
+    const savedData = localStorage.getItem('savedData');
+    if (!savedData) {
+        // Save the initial state to localStorage
+        const initialState = getGameData();
+        localStorage.setItem('savedData', JSON.stringify(initialState));
+    } else {
+        // Update state with saved data
+        const data = JSON.parse(savedData);
+        setPlayerOne(data.playerOne);
+        setPlayerTwo(data.playerTwo);
+        setPlayerOneWinCount(data.playerOneWinCount);
+        setPlayerTwoWinCount(data.playerTwoWinCount);
+        setPlayerOneLoseCount(data.playerOneLoseCount);
+        setPlayerTwoLoseCount(data.playerTwoLoseCount);
+        setRoundCount(data.roundCount);
+        setDrawCount(data.drawCount);
+    }
+  }, [setPlayerOne, setPlayerTwo, setPlayerOneWinCount, setPlayerTwoWinCount, setPlayerOneLoseCount, setPlayerTwoLoseCount, setRoundCount, setDrawCount]);
+
+
+
+
+ 
 
   const handleExit = () => {
     // Check if there is data stored in localStorage
@@ -86,20 +102,23 @@ const GameBoard = () => {
     }
     // Reset the game state
     resetGameState();
-};
+  };
 
-const saveDataToDatabase = async (data) => {
-    try {
-        // Perform database operation to save data
-        console.log('Data saved to the database:', data);
-    } catch (error) {
-        console.error('Error saving data to the database:', error);
-    }
-};
+  const saveDataToDatabase = async (data) => {
+      try {
+          // Perform database operation to save data
+          console.log('Data saved to the database:', data);
+      } catch (error) {
+          console.error('Error saving data to the database:', error);
+      }
+  };
 
 const resetGameState = () => {
     // Reset game state
+    localStorage.clear();
     setRoundCount(1);
+    setPlayerOne('');
+    setPlayerTwo('');
     setPlayerOneWinCount(0);
     setPlayerTwoWinCount(0);
     setPlayerOneLoseCount(0);
@@ -112,24 +131,6 @@ const resetGameState = () => {
     navigate('/');
 };
 
-
-  // const handleContinue = async (data) => {
-  //   try{
-  //     // const res = await axios.post('', data,{
-  //     //   headers: {
-  //     //     'Content-Type': 'application/json'
-  //     //   },
-  //     // });
-  //     // console.log('Data saved successfully:', res.data);
-  //     console.log('Data saved successfully:', data);
-  //       setIsX(true)
-  //       setSquares(Array(9).fill(null))
-  //     setIsGameOver(false);
-  //   } catch (error) {
-  //     console.error('Error saving data:', error.message);
-  //   }
-  // }
-
   const handleContinue = async () => {
     try {
         // Save data to localStorage
@@ -140,7 +141,7 @@ const resetGameState = () => {
     } catch (error) {
         console.error('Error saving data to localStorage:', error);
     }
-};
+  };
 
 const continueGame = () => {
     // Reset necessary game state
@@ -188,12 +189,11 @@ const continueGame = () => {
                 </div>
               </div>
               <div className="h-full w-full  flex flex-col items-center justify-center gap-4">
-                <Dialog  open={isGameOver} onOpenChange={setIsGameOver}>
-                    <DialogContent className='bg-slate-300 w-[90%]  rounded-md'>
+                <Dialog  open={isGameOver} onOpenChange={setIsGameOver} >
+                    <DialogContent className='bg-slate-300 w-[90%]  rounded-md' onInteractOutside={(e) =>  e.preventDefault() }>
                       <DialogHeader className="mb-5">
                         <DialogTitle className="text-center uppercase mb-2">game over...!</DialogTitle>
                         <DialogDescription className="text-center">
-                            {/* player one : {playerOne} wins... better luck next time player two : {playerTwo} */}
                             {status}
                         </DialogDescription>
                       </DialogHeader>

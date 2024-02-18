@@ -14,6 +14,9 @@ import Button from "./Button";
 import { playerStore } from "../../store/playerStore";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useRoundStore from "../../store/roundStore";
+import useWinLoseStore from "../../store/winLoseStore";
+import useDrawStore from "../../store/drawStore";
 
 const Home = () => {
     const { playerOne, playerTwo, setPlayerOne, setPlayerTwo } = playerStore();
@@ -21,6 +24,9 @@ const Home = () => {
     const [playerTwoError, setPlayerTwoError] = useState(false);
     const [playerOneBorder, setPlayerOneBorder] = useState('border-slate-400');
     const [playerTwoBorder, setPlayerTwoBorder] = useState('border-slate-400');
+    const { roundCount } = useRoundStore();
+    const { playerOneWinCount, playerTwoWinCount, playerOneLoseCount, playerTwoLoseCount } = useWinLoseStore();
+    const { drawCount } = useDrawStore();
 
 
     useEffect(() => {
@@ -39,6 +45,26 @@ const Home = () => {
             setPlayerTwoError(true);
             setPlayerTwoBorder('border-red-400');
         }
+    }
+
+    const handleSave = () => {
+        console.log('saving')
+        const currentDate = new Date().toLocaleDateString;
+        const currentTime = new Date().toLocaleTimeString();
+
+        const data = {
+        dateTime: `${currentDate} ${currentTime}`,
+        playerOne,
+        playerTwo,
+        playerOneWinCount,
+        playerTwoWinCount,
+        playerOneLoseCount,
+        playerTwoLoseCount,
+        roundCount,
+        drawCount
+        };
+
+        localStorage.setItem('savedData', JSON.stringify(data));
     }
 
     
@@ -73,7 +99,7 @@ const Home = () => {
                         <DialogFooter className="w-full text-center ">
                             {
                                 (playerOne.length > 0 && playerTwo.length > 0) ? (
-                                    <Link to='/gameboard' className="bg-neutral-900 text-white tracking-wide p-2 rounded-lg cursor-pointer sm:px-10">Start</Link>
+                                    <Link to='/gameboard' onClick={handleSave} className="bg-neutral-900 text-white tracking-wide p-2 rounded-lg cursor-pointer sm:px-10 capitalize">start</Link>
                                 ) : (
                                     <button type="button" onClick={handleClickStart} className="bg-neutral-900 text-white tracking-wide p-2 rounded-lg cursor-pointer sm:px-10 capitalize">start</button>
                                 )
