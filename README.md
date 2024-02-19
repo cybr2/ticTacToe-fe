@@ -106,15 +106,15 @@ Creating a Tic-Tac-Toe game using React.js, Framer Motion, and Tailwind CSS for 
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![React][React.js]][React-url]
-* [![Express][Express.js]][Express-url]
-* [![MongoDB][MongoDB]][MongoDB-url]
-* [![Node.js][Node.js]][Node.js-url]
-* [![Prisma][Prisma]][Prisma-url]
-* [![Tailwind CSS][Tailwind.css]][Tailwind-css-url]
-* [![Framer Motion][Framer.motion]][Framer-motion-url]
-* [![UI.Shadcn][UI.Shadcn]][UI.Shadcn-url]
-* [![Zustand][Zustand]][Zustand-url]
+* REACT
+* EXPRESS
+* MONGODB
+* NODE JS
+* PRISMA
+* TAILWIND
+* FRAMER MOTION
+* SHADCN
+* ZUSTAND
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
