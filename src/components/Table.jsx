@@ -1,19 +1,34 @@
-import { dataSample } from '../../dummy-data/data';
+import { useState, useEffect } from 'react';
+// import { dataSample } from '../../dummy-data/data';
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
 } from "./ui/accordion";
+import axios from 'axios';
+
 
 const Table = () => {
-            
+  const [dataSample, setDataSample] = useState([]);
+
+  useEffect(() => {
+    // Make axios GET request to fetch data
+    axios.get('https://tictactoe-be-cybr2.onrender.com/getRecords')
+      .then(response => {
+        setDataSample(response.data); // Assuming response.data is an array of records
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+
   return (
     <>
            <ul className="mb-4 flex w-full items-center  justify-center gap-10  text-sm flex-col  text-center text-neutral-800">
             {
               dataSample.map((data) => (
-                <li key={data.dateTime} className="w-full hover:translate-y-[-5px] transition-transform duration-300 cursor-pointer hover:text-white transition-text">
+                <li key={data._id} className="w-full hover:translate-y-[-5px] transition-transform duration-300 cursor-pointer hover:text-white transition-text">
                   <Accordion type='single' collapsible className='w-full'>
                     <AccordionItem value="item-1" className="border-none">
                       <AccordionTrigger className="flex w-full items-center justify-center rounded-md border-2 border-solid border-slate-400 hover:border-red-600 p-3 sm:p-3 md:p-4 hover:no-underline text-neutral-400 ">

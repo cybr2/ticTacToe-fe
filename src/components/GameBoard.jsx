@@ -30,6 +30,7 @@ import useDrawStore from "../../store/drawStore";
 import { settingIcon, homeIcon, logoIcon } from "../assets/svgs";
 import { playIcon } from "../assets/images";
 import { useEffect } from "react";
+import axios from "axios";
 
 const GameBoard = () => {
   const { status } = winnerStore();
@@ -58,9 +59,10 @@ const GameBoard = () => {
       playerTwoWinCount,
       playerTwoLoseCount,
     };
-
+  
     return data;
   }
+
 
 
   useEffect(() => {
@@ -105,9 +107,11 @@ const GameBoard = () => {
   };
 
   const saveDataToDatabase = async (data) => {
-      try {
-          // Perform database operation to save data
-          console.log('Data saved to the database:', data);
+    try {
+        
+        // Perform database operation to save data
+        const response = await axios.post('https://tictactoe-be-cybr2.onrender.com/addRecord',data);
+        console.log('Data saved to the database:', response.data);
       } catch (error) {
           console.error('Error saving data to the database:', error);
       }
