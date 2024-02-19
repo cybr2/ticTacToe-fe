@@ -182,9 +182,7 @@ This application combines React.js, Framer Motion, and Tailwind CSS for a sleek 
 <a href="https://tic-tac-toe-fe-nine.vercel.app/"  > 
     link for tic-tac-toe game
 </a>
-<a href="https://tic-tac-toe-fe-nine.vercel.app/"  > 
-    link for tic-tac-toe game fe
-</a>
+
 <a href="https://tictactoe-be-cybr2.onrender.com/"  > 
     link for tic-tac-toe game be
 </a>
@@ -223,6 +221,16 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 linkedin : [https://www.linkedin.com/in/ydoow/](https://www.linkedin.com/in/ydoow/)
 
 Project Link: [https://github.com/cybr2/ticTacToe-fe.git](https://github.com/cybr2/ticTacToe-fe.git)
+
+Project Link: [[https://github.com/cybr2/ticTacToe-fe.git](https://github.com/cybr2/ticTacToe-be.git)]([https://github.com/cybr2/ticTacToe-fe.git](https://github.com/cybr2/ticTacToe-be.git))
+
+
+<a href="https://www.figma.com/file/sPcBLdiCS7P3TB03r1J3xy/Untitled?type=design&node-id=0-1&mode=design&t=zYxlIv8objQWkulG">
+  <img src="./public/tictactoe-gameover-modal.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
+</a>
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
