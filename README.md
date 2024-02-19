@@ -68,12 +68,12 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<img src="./public/tictactoe-landing-page.png" alt="projectIcon" style="width: 200px; height: 200px; object-fit: cover;"/>
-<img src="./public/tictactoe-newgame-modal.png" alt="projectIcon" style="width: 200px; height: 200px; object-fit: cover;"/>
-<img src="./public/tictactoe-history-page.png" alt="projectIcon" style="width: 200px; height: 200px; object-fit: cover;"/>
-<img src="./public/tictactoe-about-page.png" alt="projectIcon" style="width: 200px; height: 200px; object-fit: cover;"/>
-<img src="./public/tictactoe-gameboard-page.png" alt="projectIcon" style="width: 200px; height: 200px; object-fit: cover;"/>
-<img src="./public/tictactoe-gameover-modal.png" alt="projectIcon" style="width: 200px; height: 200px; object-fit: cover;"/> 
+<img src="./public/tictactoe-landing-page.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
+<img src="./public/tictactoe-newgame-modal.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
+<img src="./public/tictactoe-history-page.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
+<img src="./public/tictactoe-about-page.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
+<img src="./public/tictactoe-gameboard-page.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
+<img src="./public/tictactoe-gameover-modal.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/> 
 
 
 Creating a Tic-Tac-Toe game using React.js, Framer Motion, and Tailwind CSS for the frontend, and Node.js with Express, Prisma, and MongoDB for the backend involves integrating these technologies to deliver a seamless and visually appealing user experience
