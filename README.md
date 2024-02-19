@@ -210,7 +210,7 @@ Project Link: [[https://github.com/cybr2/ticTacToe-fe.git](https://github.com/cy
 
 low fidelity wireframe:
 <a href="https://www.figma.com/file/sPcBLdiCS7P3TB03r1J3xy/Untitled?type=design&node-id=0-1&mode=design&t=zYxlIv8objQWkulG">
-  <img src="./public/tictactoe-low-fidelity.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
+  <img src="./public/tictactoe-low-fedelity.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
 </a>
 
 sprint :
