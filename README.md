@@ -55,16 +55,15 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* REACT
+* EXPRESS
+* MONGODB
+* NODE JS
+* PRISMA
+* TAILWIND
+* FRAMER MOTION
+* SHADCN
+* ZUSTAND
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,22 +98,6 @@ Creating a Tic-Tac-Toe game using React.js, Framer Motion, and Tailwind CSS for 
 * Deploy the Node.js backend server on Render, a modern cloud provider that offers managed infrastructure and automatic scaling for web applications.
 
 * Configure CORS policies on the backend server to allow requests from the frontend hosted on Vercel, enabling seamless communication between the client-side and server-side components.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* REACT
-* EXPRESS
-* MONGODB
-* NODE JS
-* PRISMA
-* TAILWIND
-* FRAMER MOTION
-* SHADCN
-* ZUSTAND
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -225,9 +208,14 @@ Project Link: [https://github.com/cybr2/ticTacToe-fe.git](https://github.com/cyb
 Project Link: [[https://github.com/cybr2/ticTacToe-fe.git](https://github.com/cybr2/ticTacToe-be.git)]([https://github.com/cybr2/ticTacToe-fe.git](https://github.com/cybr2/ticTacToe-be.git))
 
 
+low fidelity wireframe:
 <a href="https://www.figma.com/file/sPcBLdiCS7P3TB03r1J3xy/Untitled?type=design&node-id=0-1&mode=design&t=zYxlIv8objQWkulG">
-  <img src="./public/tictactoe-gameover-modal.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
+  <img src="./public/tictactoe-low-fidelity.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
 </a>
+
+sprint :
+<img src="./public/tictactoe-sprint.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
+
 
 
 
@@ -242,5 +230,4 @@ giving credits to all the resources i've use to build this project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
+[
