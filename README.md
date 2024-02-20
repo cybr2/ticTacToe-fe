@@ -165,10 +165,13 @@ This application combines React.js, Framer Motion, and Tailwind CSS for a sleek 
 - [x] deployed frontend to vercel
 - [x] deployed backend to render
 
+link game view : 
+
 <a href="https://tic-tac-toe-fe-nine.vercel.app/"  > 
     link for tic-tac-toe game
 </a>
 
+link back end : 
 
 <a href="https://tictactoe-be-cybr2.onrender.com/"  > 
     link for tic-tac-toe game be
