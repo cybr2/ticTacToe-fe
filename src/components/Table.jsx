@@ -7,24 +7,50 @@ import {
     AccordionTrigger,
 } from "./ui/accordion";
 import axios from 'axios';
+import { Skeleton } from "./ui/skeleton"
 
 
 const Table = () => {
   const [dataSample, setDataSample] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
 
   useEffect(() => {
+    setIsLoading(true);
     // Make axios GET request to fetch data
     axios.get('https://tictactoe-be-cybr2.onrender.com/getRecords')
       .then(response => {
-        setDataSample(response.data); // Assuming response.data is an array of records
+        setDataSample(response.data);
+        console.log(response.data);
+        setIsLoading(false); // Assuming response.data is an array of records
+        // Assuming response.data is an array of records
       })
       .catch(error => {
         console.error('Error fetching data:', error);
+        setIsLoading(false);
       });
   }, []);
 
   return (
     <>
+      {
+        isLoading  ? (
+            
+            <div className='flex flex-col w-full items-center pb-5'>
+                <div className='flex flex-col w-[90%] sm:w-[80%] lg:w-[60%] items-center gap-2 sm:gap-4 lg-gap-6'>
+                  <Skeleton className="h-[40px] sm-h-[50px] lg-h-[60px] w-full  rounded-xl bg-slate-400" />
+                  <div className="w-full space-y-2 mt-5 flex flex-col items-center">
+                    <Skeleton className="h-8 w-[70%]  bg-slate-400 " />
+                    <Skeleton className="h-8 w-[70%] bg-slate-400" />
+                  </div>
+                  <Skeleton className="h-[40px] sm-h-[50px] lg-h-[60px] w-full  rounded-xl bg-slate-400" />
+                  <Skeleton className="h-[40px] sm-h-[50px] lg-h-[60px] w-full  rounded-xl bg-slate-400" />
+                  <Skeleton className="h-[40px] sm-h-[50px] lg-h-[60px] w-full  rounded-xl bg-slate-400" />
+                </div>
+
+              </div>
+          
+        ) : (
            <ul className="mb-4 flex w-full items-center  justify-center gap-10  text-sm flex-col  text-center text-neutral-800">
             {
               dataSample.map((data) => (
@@ -83,6 +109,8 @@ const Table = () => {
               ))
             }
           </ul>
+        )
+      }
           
         
     </>
