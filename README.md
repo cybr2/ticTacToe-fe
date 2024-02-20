@@ -36,18 +36,21 @@ Currently, two official plugins are available:
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+### Introduction
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This project serves as a comprehensive demonstration of ability to conceive, design, and implement a full-stack application. By developing a simple yet engaging tic-tac-toe game, I aimed to showcase proficiency across frontend and backend technologies while adhering practices in software development.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+### Objectives
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+The primary objective of this endeavor was twofold: to showcase adeptness in crafting an interactive user experience through frontend development and to demonstrate competency in architecting backend systems to support seamless gameplay functionality.
 
-Use the `BLANK_README.md` to get started.
+### Technologies Employed
+
+The frontend of the application was constructed using React framework employed to facilitate efficient UI development and enhance user interactivity. On the backend, Node.js in conjunction with Express.js provided a robust foundation for handling server-side logic and facilitating communication with the client.
+
+### Core Functionality
+
+The tic-tac-toe game encompasses essential features such as player turn management, move validation to ensure game integrity, and automated determination of game outcomes, whether a win, loss, or draw. The frontend communicates asynchronously with the backend via RESTful API endpoints, enabling real-time updates and ensuring a seamless user experience.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,9 +169,11 @@ This application combines React.js, Framer Motion, and Tailwind CSS for a sleek 
     link for tic-tac-toe game
 </a>
 
+
 <a href="https://tictactoe-be-cybr2.onrender.com/"  > 
     link for tic-tac-toe game be
 </a>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -208,12 +213,11 @@ Project Link: [https://github.com/cybr2/ticTacToe-fe.git](https://github.com/cyb
 Project Link: [[https://github.com/cybr2/ticTacToe-fe.git](https://github.com/cybr2/ticTacToe-be.git)]([https://github.com/cybr2/ticTacToe-fe.git](https://github.com/cybr2/ticTacToe-be.git))
 
 
-low fidelity wireframe:
+low fidelity wireframe: https://www.figma.com/file/sPcBLdiCS7P3TB03r1J3xy/Untitled?type=design&node-id=0-1&mode=design&t=zYxlIv8objQWkulG
 
 
-<a href="https://www.figma.com/file/sPcBLdiCS7P3TB03r1J3xy/Untitled?type=design&node-id=0-1&mode=design&t=zYxlIv8objQWkulG">
-  <img src="./public/tictactoe-low-fedelity.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
-</a>
+<img src="./public/tictactoe-low-fedelity.png" alt="projectIcon" style="width: 400px; height: 400px; object-fit: cover;"/>
+
 
 sprint :
 
