@@ -51,7 +51,7 @@ const Table = () => {
               </div>
           
         ) : (
-           <ul className="mb-4 flex w-full items-center  justify-center gap-10  text-sm flex-col  text-center text-neutral-800">
+           <ul className="mb-4 flex w-full lg:w-[70%] items-center  justify-center gap-10  text-sm flex-col  text-center text-neutral-800">
             {
               dataSample.map((data) => (
                 <li key={data._id} className="w-full hover:translate-y-[-5px] transition-transform duration-300 cursor-pointer hover:text-white transition-text">
